@@ -58,6 +58,12 @@ app.get('/produto2/:categoria/:pagina', (req, res) => {
     })
 });
 
+app.get('/usuarios', (req, res) => {
+    const { idade } = req.query;
+
+    res.send(`filtrando usuário com idade: ${idade}`);
+});
+
 app.listen(
     3000, 
     () => console.log('sistema encontrado')
