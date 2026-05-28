@@ -29,6 +29,12 @@ app.get('/usuarios/:id', (req, res) => {
     res.send('Usuario '+ userId)
 });
 
+app.get('/produtos/:nome', (req, res) => {
+    const produto = req.params.nome;
+    res.send('produto '+ produto)
+});
+
+
 app.listen(
     3000, 
     () => console.log('sistema encontrado')
