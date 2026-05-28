@@ -34,6 +34,16 @@ app.get('/produtos/:nome', (req, res) => {
     res.send('produto '+ produto)
 });
 
+app.get('/filmes/:id/:nome', (req, res) => {
+    const filme = req.params.nome;
+    const codigo = req.params.id;
+    res.json({
+        "nome do filme": filme,
+        "id": codigo
+    })
+});
+
+
 
 app.listen(
     3000, 
