@@ -9,6 +9,13 @@ app.get('/sobre', (req, res) => {
   res.send('Sistema sobre o Santa Cruz')
 })
 
+app.get('/contato', (req, res) => {
+    res.json({
+        "email": "contatosantacruz@email.com",
+        "telefone": "(81) 99659-9076"
+    })
+})
+
 app.listen(
     3000, 
     () => console.log('sistema encontrado')
