@@ -49,6 +49,15 @@ app.get('/buscar', (req, res) => {
     res.send(`buscando por: ${nome}`);
 });
 
+app.get('/produto2/:categoria/:pagina', (req, res) => {
+    const produto2 = req.params.categoria;
+    const produto = req.params.pagina;
+    res.json({
+        "categoria do produto": produto2,
+        "pagina": produto
+    })
+});
+
 app.listen(
     3000, 
     () => console.log('sistema encontrado')
